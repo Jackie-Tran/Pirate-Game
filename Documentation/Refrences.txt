@@ -1,0 +1,4 @@
+#To fix screen tearing
+https://www.reddit.com/r/pygame/comments/3blsr3/jittering_movement/
+https://groups.google.com/forum/#!topic/pygame-mirror-on-google-groups/sJ-3iaI7jRk
+http://archives.seul.org/pygame/users/Aug-2005/msg00169.html

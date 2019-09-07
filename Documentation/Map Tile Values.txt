@@ -1,0 +1,19 @@
+Name: Jackie Tran
+Date: 6/8/2016
+Title: Treasure Hunter Tile Mapping Colour Values
+Description: This file contains the RGBA values of the different colours for the different tiles in the game.
+The game reads an image file and checks each pixel for these RGBA values and depending on the value, it will add 
+the corresponding game object into the game.
+
+---------------------------------------------------------
+Treasure Hunter Tile Mapping Colour Values
+---------------------------------------------------------
+PLAYER SPAWN: (255, 0, 255, 255)
+DIRT BLOCK: (222, 144, 61, 255)
+GRASS BLOCK: (0, 255, 0, 255)
+SAND BLOCK: (243, 225, 179)
+COIN: (255, 255, 0, 255)
+CRAB: (255, 0, 0, 255)
+ENEMY AI BOX: (0, 0, 0, 255)
+MAP: (0, 0, 255, 255)
+CHEST: (255, 0, 255, 255)
