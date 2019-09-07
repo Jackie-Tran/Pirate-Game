@@ -1,1 +1,41 @@
 # Pirate-Game
+
+This game was made based off the "process of design" project that I did with my partner. It is a 2D platformer
+where you play as a pirate that goes through the different places looking for parts of a treasure map that leads
+him to the hidden treasure.
+
+Most of the code is original but I did look up some tutorials online on how to add collision detection and 
+the side scrolling. Some cool things that I did were...
+
+GameState Handling All of GameStateManager.py and GameStates
+From my knowledge with game development in Java I was able to transfer my knowledge into pygame. Each state
+of the game has its own class and depending on the current state it does certain things. In my program,
+the game only loads the current state and nothing else and only runs the update and draw functions of that
+state. This makes managing the game much easier and is a lot more efficient.
+
+Menu Background Animation: GameStates.py in MenuState Class at line 41-51
+When first making the menu I had difficulty implementing the animated background. They way I had it before, it
+ran at around 10 FPS because I used pygame sleep function but now I use my own timer to keep track of when to
+change the image. It grabs the images from another image that contains the animation cycle of the background.
+
+Spritesheet functionality: SpriteSheet.py
+Before I would used to make a separate image file for all the objects in the game but I thought that this would
+make my project messy and hard to navigate around. With the spritesheet class that I made, it allows me to grab
+a subimage of the sprite sheet I created which has the image for every object in the game.
+
+Level Loading: GameState.py in PlayState Class in the 'loadLevel" function
+At first I thought about tile mapping using numbers from a text document, but the problem I had with this was
+that it did not provide a great visual of how the map might actually work. The new way I make levels now is by
+creating a .png file in photoshop that is 300x19 pixels which is the size of each level. Then I added pixels
+where I thought certain blocks should be. The colour of the pixels are correspondent to a object in the game
+(the colour codes for the level design is in the "Level Colour Code". In the program I use the Pillow library
+which allows me to load an image and I was able to have the program go through all the pixels and read the
+colour values of each. After reading the colour value of the pixel, it then adds the corresponding object to 
+the game.
+
+World Shift Performance Fix:
+Without this performance fix, the computer would update and draw every object in the game even if it wasn't in
+the screen. This fix now restrains what objects get updated and drawn. If the object is outside the boundaries
+then it will be removed from the activeObject group list.
+
+
